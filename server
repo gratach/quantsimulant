@@ -27,6 +27,8 @@ class MeinServer(BaseHTTPRequestHandler):
 					self.send_header("content-type", "text/javascript; charset=\"utf-8\"")
 				elif tempfad.suffix == ".wasm":
 					self.send_header("content-type", "application/wasm")
+				elif tempfad.suffix == ".ico":
+					self.send_header("content-type", "image/x-icon")
 				with tempfad.open('rb') as fil:
 					daten = fil.read()
 				self.send_header("content-length", str(len(daten)))

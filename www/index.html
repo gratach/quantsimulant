@@ -503,21 +503,21 @@ var lstift;
 var rstift;
 
 
-var getf64 = s1d.getf64
-var setf64 = s1d.setf64
-var re_f64_wertbei = s1d.re_f64_wertbei
-var im_f64_wertbei = s1d.im_f64_wertbei
-var f64_wertbei = s1d.f64_wertbei
-var Dsetzekonst = s1d.Dsetzekonst
-var cf64_SchwingungsZerlegung = s1d.cf64_SchwingungsZerlegung
-var cf64_SchwingungsZusammensetzung = s1d.cf64_SchwingungsZusammensetzung
-var schwingungs_zer = s1d.schwingungs_zer
-var schwingungs_zus = s1d.schwingungs_zus
-var Cf64quad_f64iff = s1d.Cf64quad_f64iff
-var Cf64Mittlere_abw = s1d.Cf64Mittlere_abw
-var Cf64Mittlerer_Betrag = s1d.Cf64Mittlerer_Betrag
-var mache_arbeiter = s1d.mache_arbeiter;
-var copy_vek = s1d.copy_vek
+var getf64;
+var setf64;
+var re_f64_wertbei;
+var im_f64_wertbei;
+var f64_wertbei;
+var Dsetzekonst;
+var cf64_SchwingungsZerlegung;
+var cf64_SchwingungsZusammensetzung;
+var schwingungs_zer;
+var schwingungs_zus;
+var Cf64quad_f64iff;
+var Cf64Mittlere_abw;
+var Cf64Mittlerer_Betrag;
+var mache_arbeiter;
+var copy_vek;
 
 function parameter_auslesen(){
 	//var aufl = document.getElementById("aufl");
@@ -1088,6 +1088,24 @@ function glaetten(ordnung){
 
 
 function bereit(){
+
+	getf64 = s1d.getf64
+	setf64 = s1d.setf64
+	re_f64_wertbei = s1d.re_f64_wertbei
+	im_f64_wertbei = s1d.im_f64_wertbei
+	f64_wertbei = s1d.f64_wertbei
+	Dsetzekonst = s1d.Dsetzekonst
+	cf64_SchwingungsZerlegung = s1d.cf64_SchwingungsZerlegung
+	cf64_SchwingungsZusammensetzung = s1d.cf64_SchwingungsZusammensetzung
+	schwingungs_zer = s1d.schwingungs_zer
+	schwingungs_zus = s1d.schwingungs_zus
+	Cf64quad_f64iff = s1d.Cf64quad_f64iff
+	Cf64Mittlere_abw = s1d.Cf64Mittlere_abw
+	Cf64Mittlerer_Betrag = s1d.Cf64Mittlerer_Betrag
+	mache_arbeiter = s1d.mache_arbeiter;
+	copy_vek = s1d.copy_vek
+
+	console.log("Bereit");
 	
 	lstift = new potential_stift()
 	rstift = new vektor_stift(100)

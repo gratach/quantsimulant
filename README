@@ -1,17 +1,37 @@
-Diese Version des Quantsimulants befindet sich grade im Umbau.
+# Quantsimulant 
 
-Ziel ist es den Aufbau modularer zu gestalten.
+This is a web application for simulating the one-dimensional schrödinger equation in a custom time-dependent potential. The simulation is done by solving the time-dependent schrödinger equation using the runge-kutta method. The simulation is done in the browser using WebAssembly.
 
-Leider ist momentan alles unkommentiert
+The website is hosted on [quantsimulant.de](https://quantsimulant.de).
 
+## Building the project
 
+This project uses the [emscripten](https://emscripten.org/) compiler to compile the C code to WebAssembly.
 
-Zum Erstellen der wasm Datei:
+Download the latest version of emscripten and activate it by running the following commands in the installation directory:
 
+```bash
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+./emsdk install latest
+./emsdk activate latest
+source ./emsdk_env.sh
+```
+
+Build the project by running the following command in the root directory of the project:
+```bash
 ./erstelle
+```
 
-Zum Anzeigen im Browser: 
+## Hosting the project
 
-./zeige
+The www directory contains the files that need to be hosted on a web server. Use the following command to start a simple web server in the www directory:
 
-Das compilieren des Assembler Codes funktioniert nur wenn man das Werkzeug emcc von Emscripten instaliert hat
+```bash
+./server
+```
+
+The website can now be accessed by opening a browser and navigating to `localhost:9090`.
+
+
+

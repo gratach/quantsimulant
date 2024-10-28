@@ -52,14 +52,18 @@ function MapMix(map, plus){//map, plus = Map{ding : Map{kenn : [werte]}}
 }
 
 
-import EMSIMPO from "./main.js"
+//import EMSIMPO from "./main.js"
+// Import the emscripten Module
+import Module from "./main.js"
 export class Numerik{
 	constructor(anmeld){
 		this.anmeld = anmeld
-		this.Modul = EMSIMPO()
-		this.Modul.onRuntimeInitialized = this.bereit.bind(this)
+		Module().then((modul)=>{
+			this.Modul = modul; 
+			this.wasm_def(this.Modul);
+			this.bereit.bind(this)();
+		})
 		
-		this.wasm_def(this.Modul)
 	}
 	wasm_def(Modul){
 		this.re_f64_wertbei = Modul.cwrap('re_f64_wertbei', 'number', ['number','number','number']);
