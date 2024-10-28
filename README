@@ -1,0 +1,17 @@
+Diese Version des Quantsimulants befindet sich grade im Umbau.
+
+Ziel ist es den Aufbau modularer zu gestalten.
+
+Leider ist momentan alles unkommentiert
+
+
+
+Zum Erstellen der wasm Datei:
+
+./erstelle
+
+Zum Anzeigen im Browser: 
+
+./zeige
+
+Das compilieren des Assembler Codes funktioniert nur wenn man das Werkzeug emcc von Emscripten instaliert hat

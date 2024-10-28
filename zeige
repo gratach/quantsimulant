@@ -1,0 +1,4 @@
+#!/bin/bash
+#./erstelle
+nohup sleep 0.5 &> /dev/null; firefox localhost:9090 &> /dev/null &
+./server
