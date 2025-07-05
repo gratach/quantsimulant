@@ -1,4 +1,4 @@
 #!/bin/bash
-emcc wasm/*.c -s ENVIRONMENT=web -s EXIT_RUNTIME=0 -s 'EXPORTED_FUNCTIONS=["_malloc", "_main", "_f64_wertbei"]' -s 'EXPORTED_RUNTIME_METHODS=["cwrap","ccall"]' -o www/main.mjs #praezision
+emcc wasm/*.c -s ENVIRONMENT=web -s EXIT_RUNTIME=0 -s 'EXPORTED_FUNCTIONS=["_malloc", "_main", "_f64_wertbei"]' -s 'EXPORTED_RUNTIME_METHODS=["cwrap","ccall","HEAPF64"]' -o www/main.mjs #praezision
 rm www/main.js
 mv www/main.mjs www/main.js
